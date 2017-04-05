@@ -30,8 +30,8 @@ const HEROES: Hero[] = [
     </div>
     <h3>My Heroes</h3>
     <ul class="heroes">
-      <li>
-        <!-- cada heroi vem aqui -->
+      <li *ngFor="let hero of heroes">
+        {{hero.id}}
       </li>
     </ul>
     `
