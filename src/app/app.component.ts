@@ -31,7 +31,7 @@ const HEROES: Hero[] = [
     <h3>My Heroes</h3>
     <ul class="heroes">
       <li *ngFor="let hero of heroes">
-        {{hero.id}}
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
       </li>
     </ul>
     `
