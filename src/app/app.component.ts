@@ -28,6 +28,12 @@ const HEROES: Hero[] = [
       <label>name: </label>
       <input [(ngModel)]="hero.name" placeholder="name">
     </div>
+    <h3>My Heroes</h3>
+    <ul class="heroes">
+      <li>
+        <!-- cada heroi vem aqui -->
+      </li>
+    </ul>
     `
 })
 export class AppComponent {
@@ -36,5 +42,7 @@ export class AppComponent {
     id: 1,
     name: 'Windstorm'
   };
+
+  heroes = HEROES;
   
 }
