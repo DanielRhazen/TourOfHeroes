@@ -9,6 +9,7 @@ import { AppComponent }  from './app.component';
     BrowserModule,
     FormsModule // <-- import the FormsModule before binding with [(ngModel)]
   ],
+  //Every component must be declared in one—and only one—Angular module.
   declarations: [
     AppComponent,
     HeroDetailComponent

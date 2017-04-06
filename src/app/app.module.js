@@ -22,6 +22,7 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             forms_1.FormsModule // <-- import the FormsModule before binding with [(ngModel)]
         ],
+        //Every component must be declared in one—and only one—Angular module.
         declarations: [
             app_component_1.AppComponent,
             hero_detail_component_1.HeroDetailComponent
