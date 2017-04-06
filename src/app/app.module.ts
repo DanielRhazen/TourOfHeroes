@@ -1,3 +1,4 @@
+import { HeroService } from './services/hero.service';
 import { HeroDetailComponent } from './hero-detail.component';
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
