@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var hero_detail_component_1 = require("./hero-detail.component");
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms"); // <-- NgModel lives here
@@ -22,7 +23,8 @@ AppModule = __decorate([
             forms_1.FormsModule // <-- import the FormsModule before binding with [(ngModel)]
         ],
         declarations: [
-            app_component_1.AppComponent
+            app_component_1.AppComponent,
+            hero_detail_component_1.HeroDetailComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     })
