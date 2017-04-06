@@ -14,7 +14,6 @@ var AppComponent = (function () {
             id: 1,
             name: 'Windstorm'
         };
-        this.heroes = HEROES;
     }
     AppComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
