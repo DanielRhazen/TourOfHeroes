@@ -4,6 +4,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
 import { AppComponent }  from './app.component';
+import { HeroesComponent } from './heroes.component';
 
 @NgModule({
   imports: [
@@ -13,8 +14,12 @@ import { AppComponent }  from './app.component';
   //Every component must be declared in one—and only one—Angular module.
   declarations: [
     AppComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeroesComponent
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [
+    HeroService
+  ]
 })
 export class AppModule { }
