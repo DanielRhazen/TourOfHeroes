@@ -10,6 +10,7 @@ var core_1 = require("@angular/core");
 var HeroService = (function () {
     function HeroService() {
     }
+    HeroService.prototype.getHeroes = function () { };
     return HeroService;
 }());
 HeroService = __decorate([
