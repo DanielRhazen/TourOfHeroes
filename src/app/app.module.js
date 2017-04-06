@@ -6,11 +6,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var hero_service_1 = require("./services/hero.service");
-var hero_detail_component_1 = require("./hero-detail.component");
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var forms_1 = require("@angular/forms"); // <-- NgModel lives here
+var forms_1 = require("@angular/forms");
+var router_1 = require("@angular/router");
+var hero_service_1 = require("./services/hero.service");
+var hero_detail_component_1 = require("./hero-detail.component");
 var app_component_1 = require("./app.component");
 var heroes_component_1 = require("./heroes.component");
 var AppModule = (function () {
@@ -22,7 +23,13 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
-            forms_1.FormsModule // <-- import the FormsModule before binding with [(ngModel)]
+            forms_1.FormsModule,
+            router_1.RouterModule.forRoot([
+                {
+                    path: 'heroes',
+                    component: heroes_component_1.HeroesComponent
+                }
+            ])
         ],
         //Every component must be declared in one—and only one—Angular module.
         declarations: [
