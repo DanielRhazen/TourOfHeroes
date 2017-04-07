@@ -26,6 +26,10 @@ import { HeroesComponent } from './heroes.component';
         path: '',
         redirectTo: '/dashboard', //para que qnd o app iniciar seja redirecionado para dashboard 
         pathMatch: 'full'
+      },
+      {
+        path: 'detail/:id',
+        component: HeroDetailComponent
       }
     ])
   ],
