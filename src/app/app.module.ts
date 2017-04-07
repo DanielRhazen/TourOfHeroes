@@ -22,6 +22,11 @@ import { HeroesComponent } from './heroes.component';
         path: 'dashboard',
         component: DashboardComponent
       },
+      {
+        path: '',
+        redirectTo: '/dashboard', //para que qnd o app iniciar seja redirecionado para dashboard 
+        pathMatch: 'full'
+      }
     ])
   ],
   //Every component must be declared in one—and only one—Angular module.
