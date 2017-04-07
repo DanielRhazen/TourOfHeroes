@@ -1,3 +1,4 @@
+import { DashboardComponent } from './dashboard.component';
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
@@ -16,14 +17,19 @@ import { HeroesComponent } from './heroes.component';
       {
         path: 'heroes', //combina suas rotas com a URL do broswer
         component: HeroesComponent
-      }
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
     ])
   ],
   //Every component must be declared in one—and only one—Angular module.
   declarations: [
     AppComponent,
     HeroDetailComponent,
-    HeroesComponent
+    HeroesComponent,
+    DashboardComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [
