@@ -12,19 +12,23 @@ import 'rxjs/add/operator/switchMap';
   templateUrl: "./views/hero-detail-component.html"
 })
 
-constructor(
-  private heroService: HeroService,
-  private route: ActivatedRoute,
-  private location: Location
-){}
 
-//the hero property is a input property
 export class HeroDetailComponent implements OnInit {
+  //the hero property is a input property
+  @Input()hero: Hero;
+
+  constructor (
+    private heroService: HeroService,
+    private route: ActivatedRoute,
+    private location: Location
+  ){}
   //ngOnInit lifecycle hook
   ngOnInit(): void {
     this.route.params
       .switchMap((params: Params) => this.heroService.getHero(+params['id']))
       .subscribe(hero => this.hero = hero);
   }
-  @Input()hero: Hero;
+  goBack(): void {
+    this.location.back();
+  }
 }
