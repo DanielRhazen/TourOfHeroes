@@ -10,23 +10,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var common_1 = require("@angular/common");
+var hero_service_1 = require("./services/hero.service");
 var hero_1 = require("./hero");
+require("rxjs/add/operator/switchMap");
+constructor(private, heroService, hero_service_1.HeroService, private, route, router_1.ActivatedRoute, private, location, common_1.Location);
+{ }
+//the hero property is a input property
 var HeroDetailComponent = (function () {
-    //the hero property is a input property
     function HeroDetailComponent() {
     }
+    //ngOnInit lifecycle hook
+    HeroDetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params
+            .switchMap(function (params) { return _this.heroService.getHero(+params['id']); })
+            .subscribe(function (hero) { return _this.hero = hero; });
+    };
     return HeroDetailComponent;
 }());
 __decorate([
     core_1.Input(),
     __metadata("design:type", hero_1.Hero)
 ], HeroDetailComponent.prototype, "hero", void 0);
-HeroDetailComponent = __decorate([
-    core_1.Component({
-        selector: 'hero-detail',
-        templateUrl: "./views/hero-detail-component.html"
-    })
-    //the hero property is a input property
-], HeroDetailComponent);
 exports.HeroDetailComponent = HeroDetailComponent;
 //# sourceMappingURL=hero-detail.component.js.map
