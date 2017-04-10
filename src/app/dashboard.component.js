@@ -16,6 +16,7 @@ var DashboardComponent = (function () {
         this.heroService = heroService;
         this.heroes = []; //definindo uma array de Hero vazia
     }
+    //promisse da heroService
     DashboardComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.heroService.getHeroes().then(function (heroes) { return _this.heroes = heroes.slice(1, 5); }); //promisse 

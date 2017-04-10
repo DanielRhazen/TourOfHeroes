@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HEROES = [
-    { id: 99, name: 'Eduardo Costa' },
+    { id: 11, name: 'Eduardo Costa' },
     { id: 12, name: 'Daniel' },
     { id: 13, name: 'Max' },
     { id: 14, name: 'Pedro' },
