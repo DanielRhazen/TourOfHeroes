@@ -20,16 +20,20 @@ var HeroService = (function () {
     HeroService.prototype.getHeroes = function () {
         return this.http.get(this.heroesUrl)
             .toPromise()
-            .then(function (response) { return response.json().data; })
+            .then(function (response) { return response.json().data; }) //callback, metodo json do Http para extrair os dados com a resposta
             .catch(this.handleError);
     };
     HeroService.prototype.handleError = function (error) {
         console.error('Um error ocorreu', error);
         return Promise.reject(error.message || error);
     };
+    //para buscar um heroi pelo id utilizando o http
     HeroService.prototype.getHero = function (id) {
-        return this.getHeroes()
-            .then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
+        var url = this.heroesUrl + "/" + id; //url com o id do heroi
+        return this.http.get(url)
+            .toPromise()
+            .then(function (response) { return response.json().data; })
+            .catch(this.handleError);
     };
     return HeroService;
 }());
