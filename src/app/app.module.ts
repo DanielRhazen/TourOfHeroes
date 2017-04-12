@@ -4,10 +4,10 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module'; 
 
-import { DashboardComponent } from './dashboard.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { AppComponent }  from './app.component';
-import { HeroesComponent } from './heroes.component';
+import { DashboardComponent } from './components/dashboard.component';
+import { HeroDetailComponent } from './components/hero-detail.component';
+import { AppComponent }  from './components/app.component';
+import { HeroesComponent } from './components/heroes.component';
 
 import { HeroService } from './services/hero.service';
 
