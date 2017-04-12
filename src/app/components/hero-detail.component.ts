@@ -9,7 +9,8 @@ import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'hero-detail',
-  templateUrl: "./views/hero-detail-component.html"
+  templateUrl: "./views/hero-detail-component.html",
+  styleUrls: ['./styles/hero-detail.component.css']
 })
 
 

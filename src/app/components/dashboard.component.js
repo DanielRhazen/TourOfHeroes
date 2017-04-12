@@ -19,14 +19,15 @@ var DashboardComponent = (function () {
     //promisse da heroService
     DashboardComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.heroService.getHeroes().then(function (heroes) { return _this.heroes = heroes.slice(1, 5); }); //promisse 
+        this.heroService.getHeroes().then(function (heroes) { return _this.heroes = heroes.slice(0, 8); }); //promisse 
     };
     return DashboardComponent;
 }());
 DashboardComponent = __decorate([
     core_1.Component({
         selector: 'my-dashboard',
-        templateUrl: './views/dashboard-component.html'
+        templateUrl: './views/dashboard-component.html',
+        styleUrls: ['./styles/dashboard.component.css']
     }),
     __metadata("design:paramtypes", [hero_service_1.HeroService])
 ], DashboardComponent);
