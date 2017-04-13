@@ -5,11 +5,12 @@ var InMemoryDataService = (function () {
     }
     InMemoryDataService.prototype.createDb = function () {
         var heroes = [
-            { id: 11, name: 'The Flash', secretIdentity: 'Eduardo Allen' },
+            { id: 10, name: 'Eduardo C', secretIdentity: 'Eduardo Allen' },
+            { id: 11, name: 'Débora', secretIdentity: 'Eduardo Allen' },
             { id: 12, name: 'Daniel', secretIdentity: 'Eduardo Allen' },
             { id: 13, name: 'Max', secretIdentity: 'Eduardo Allen' },
-            { id: 14, name: 'Pedro', secretIdentity: 'Eduardo Allen' },
-            { id: 15, name: 'Boruto', secretIdentity: 'Eduardo Allen' },
+            { id: 14, name: 'Super Edu', secretIdentity: 'Eduardo Allen' },
+            { id: 15, name: 'The Flash', secretIdentity: 'Eduardo Allen' },
             { id: 16, name: 'Lucas', secretIdentity: 'Eduardo Allen' },
             { id: 17, name: 'Isabela', secretIdentity: 'Eduardo Allen' },
             { id: 18, name: 'Dr IQ', secretIdentity: 'Eduardo Allen' },
