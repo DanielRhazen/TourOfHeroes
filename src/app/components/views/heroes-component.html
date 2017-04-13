@@ -13,3 +13,9 @@
     </h2>
     <button (click)="gotoDetail()">Detalhes</button>
   </div>
+  <div>
+    <label>Hero name: </label> <input #heroname/>
+    <button (click)="add(heroName.value); heroName.value=''">
+      Add
+    </button>
+  </div>
